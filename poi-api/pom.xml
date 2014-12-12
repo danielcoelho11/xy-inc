@@ -14,6 +14,7 @@
 		<project.build.sourceVersion>1.7</project.build.sourceVersion>
 
 		<org.glassfish.jersey.version>2.13</org.glassfish.jersey.version>
+		<org.hibernate.version>4.3.7.Final</org.hibernate.version>
 	</properties>
 
 	<dependencies>
@@ -31,6 +32,21 @@
 			<groupId>org.glassfish.jersey.media</groupId>
 			<artifactId>jersey-media-json-jackson</artifactId>
 			<version>${org.glassfish.jersey.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>${org.hibernate.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.34</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.3.2</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>

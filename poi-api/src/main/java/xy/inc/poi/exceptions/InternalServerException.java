@@ -1,4 +1,4 @@
-package xy.inc.poi.exception;
+package xy.inc.poi.exceptions;
 
 import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.MediaType;
@@ -12,6 +12,6 @@ public class InternalServerException extends WebApplicationException {
 
 	public InternalServerException() {
 		super(Response.status(Status.INTERNAL_SERVER_ERROR).type(MediaType.APPLICATION_JSON)
-				.entity(new RestError(Status.INTERNAL_SERVER_ERROR.getStatusCode(), MESSAGE)).build());
-	}	
+		        .entity(new RestError(Status.INTERNAL_SERVER_ERROR.getStatusCode(), MESSAGE)).build());
+	}
 }
