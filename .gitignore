@@ -15,3 +15,4 @@ target
 *.project
 *.classpath
 /poi-api/nb-configuration.xml
+/poi-api/src/main/webapp/META-INF/context.xml
