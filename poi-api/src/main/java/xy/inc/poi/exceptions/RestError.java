@@ -9,6 +9,10 @@ public class RestError implements Serializable {
 	private int errorCode;
 	private String errorMsg;
 
+	public RestError() {
+		
+	}
+	
 	public RestError(int errorCode, String errorMsg) {
 		this.errorCode = errorCode;
 		this.errorMsg = errorMsg;

@@ -54,7 +54,7 @@ public class POIServiceApi {
 		try {
 			// validate poi info
 			if (poi == null) {
-				throw new RestParameterException("pointX", ParameterValidationType.INVALID);
+				throw new RestParameterException(ParameterValidationType.INVALID);
 			}
 			if (StringUtils.isBlank(poi.getName())) {
 				throw new RestParameterException("name", ParameterValidationType.REQUIRED);

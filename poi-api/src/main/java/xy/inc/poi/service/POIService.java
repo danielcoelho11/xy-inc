@@ -28,8 +28,4 @@ public class POIService {
 	public List<POI> searchNearestPOIs(int pointX, int pointY, int maxDistance) {
 		return POIs.getInstance().searchNearest(pointX, pointY, maxDistance);
 	}
-	private void teste() {
-		
-	}
-
 }

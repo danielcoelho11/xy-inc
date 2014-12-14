@@ -2,7 +2,6 @@ package xy.inc.poi.domain;
 
 import java.util.List;
 
-import org.hibernate.Transaction;
 import org.hibernate.criterion.Order;
 
 import xy.inc.poi.util.HibernateUtil;
@@ -22,50 +21,53 @@ public class POIs implements IPOIRepository {
 	}
 
 	@Override
-	public POI create(POI poi) {
-		Transaction tx = null;
-		try {
-			tx = HibernateUtil.getSession().beginTransaction();
+	public POI create(POI poi) {		
+		try {			
+			boolean startedLocally = HibernateUtil.beginTransaction();
 			HibernateUtil.getSession().save(poi);
-			tx.commit();
+			if (startedLocally) {
+				HibernateUtil.getSession().getTransaction().commit();
+			}			
 		} catch (Exception e) {
-			if (tx != null)
-				tx.rollback();
+			if (HibernateUtil.getSession().getTransaction() != null)
+				HibernateUtil.getSession().getTransaction().rollback();
 			throw e;
 		}
 
 		return poi;
-	}
+	}	
 
 	@Override
-	public List<POI> findAll() {
-		Transaction tx = null;
+	public List<POI> findAll() {		
 		try {
-			tx = HibernateUtil.getSession().beginTransaction();
+			boolean startedLocally = HibernateUtil.beginTransaction();
 			List<POI> poiList = (List<POI>) HibernateUtil.getSession().createCriteria(POI.class)
 			        .addOrder(Order.asc(POI.NAME)).list();
-			tx.commit();
+			if (startedLocally) {
+				HibernateUtil.getSession().getTransaction().commit();
+			}
 			return poiList;
 		} catch (Exception e) {
-			if (tx != null)
-				tx.rollback();
+			if (HibernateUtil.getSession().getTransaction() != null)
+				HibernateUtil.getSession().getTransaction().rollback();
 			throw e;
 		}
 	}
 
 	@Override
-	public List<POI> searchNearest(int pointX, int pointY, int maxDistance) {
-		Transaction tx = null;
+	public List<POI> searchNearest(int pointX, int pointY, int maxDistance) {		
 		try {
-			tx = HibernateUtil.getSession().beginTransaction();
+			boolean startedLocally = HibernateUtil.beginTransaction();
 			List<POI> poiList = (List<POI>) HibernateUtil.getSession().createSQLQuery(SEARCH_NEAREST_QUERY)
 			        .addEntity(POI.class).setParameter("pointX", pointX).setParameter("pointY", pointY)
 			        .setParameter("maxD", maxDistance).list();
-			tx.commit();
+			if (startedLocally) {
+				HibernateUtil.getSession().getTransaction().commit();
+			}
 			return poiList;
 		} catch (Exception e) {
-			if (tx != null)
-				tx.rollback();
+			if (HibernateUtil.getSession().getTransaction() != null)
+				HibernateUtil.getSession().getTransaction().rollback();
 			throw e;
 		}
 	}

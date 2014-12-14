@@ -16,5 +16,13 @@ public class RestParameterException extends WebApplicationException {
 		        .entity(new RestError(Status.BAD_REQUEST.getStatusCode(), String.format(type.getDescritpion(),
 		                fieldName))).build());
 	}
+	
+	public RestParameterException(ParameterValidationType type) {
+		super(Response
+		        .status(Status.BAD_REQUEST)
+		        .type(MediaType.APPLICATION_JSON)
+		        .entity(new RestError(Status.BAD_REQUEST.getStatusCode(), type.getDescritpion()))
+		        .build());
+	}
 
 }
