@@ -11,4 +11,4 @@ Pré-requisitos para execução
 
 Configuração
 -------------------------------------------------------
-[a link](https://github.com/danielcoelho11/xy-inc/blob/master/sqlScripts/POI_Script.sql)
+Execute o arquivo de scripts [POI_Script.sql](https://github.com/danielcoelho11/xy-inc/blob/master/sqlScripts/POI_Script.sql)
