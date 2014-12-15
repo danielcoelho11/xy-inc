@@ -9,5 +9,5 @@ Pré-requisitos para execução
  * MySQL 5
 
 Configuração
-======================================================
+-------------------------------------------------------
 [a link](https://github.com/danielcoelho11/xy-inc/blob/master/sqlScripts/POI_Script.sql)
