@@ -28,3 +28,8 @@ Após o deploy da aplicação as seguintes operações estarão disponíveis:
 * Recuperar todos os POIs
   * Endpoint: http://localhost:8080/poi-api/api/rest/pois/
   * Método: GET
+  
+  * Buscar POIs por proximidade
+  * Endpoint: http://localhost:8080/poi-api/rest/pois/nearest?pointX=&pointY=&maxDistance=
+  * Método: GET
+  * Exmplo de chamada: http://localhost:8080/poi-api/rest/pois/nearest?pointX=20&pointY=10&maxDistance=10
