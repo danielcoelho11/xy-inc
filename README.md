@@ -4,7 +4,7 @@ API Rest para localização de pontos de interesse(POIs)
 Aplicação para cadastro e buscas de POIs.
 
 Pré-requisitos para execução
-
+======================================================
  * jdk 7
  * MySQL 5
 
