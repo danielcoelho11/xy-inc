@@ -5,8 +5,9 @@ Aplicação para cadastro e buscas de POIs.
 
 Pré-requisitos para execução
 -------------------------------------------------------
- * jdk 7
- * MySQL 5
+ * Java 1.7+
+ * MySQL 5.6
+ * Apache Maven
 
 Configuração
 -------------------------------------------------------
