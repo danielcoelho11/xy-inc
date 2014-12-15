@@ -1,7 +1,7 @@
 API Rest para localização de pontos de interesse(POIs)
 ======================================================
 
-Aplicação para cadastro e buscas de POIs.
+Aplicação para cadastro e busca de POIs.
 
 Pré-requisitos para execução
 -------------------------------------------------------
