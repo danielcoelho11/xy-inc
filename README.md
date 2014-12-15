@@ -20,13 +20,13 @@ Execução
 Após o deploy da aplicação as seguintes operações estarão disponíveis:
 
 * Cadastrar POIs
-  * Endpoint: http://localhost:8080/poi-api/api/rest/pois/
+  * Endpoint: http://localhost:8080/poi-api/rest/pois
   * Método: POST
   * Content-Type: application/json
   * Ex de parâmetros: {"name" : "Cafeteria", "pointX" : 19, "pointY" : 10}
 
 * Recuperar todos os POIs
-  * Endpoint: http://localhost:8080/poi-api/api/rest/pois/
+  * Endpoint: http://localhost:8080/poi-api/rest/pois
   * Método: GET
   
 * Buscar POIs por proximidade
