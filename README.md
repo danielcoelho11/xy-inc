@@ -19,4 +19,5 @@ Execução
 -------------------------------------------------------
 Após o deploy da aplicação as seguintes operações estarão disponíveis:
 * Recuperar todos os POIs
-  * gsdfa 
+  * Endpoint: http://localhost:8080/poi-api/api/rest/pois/
+  * Método: GET
