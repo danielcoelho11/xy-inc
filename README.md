@@ -8,6 +8,7 @@ Pré-requisitos para execução
  * Java 1.7+
  * MySQL 5.6
  * Apache Maven
+ * Apache Tomcat 7+
 
 Configuração
 -------------------------------------------------------
