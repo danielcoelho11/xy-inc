@@ -12,7 +12,7 @@ public class POIs implements IPOIRepository {
 	private static final String SEARCH_NEAREST_QUERY = "SELECT * FROM POI WHERE (POWER(:pointX - POINT_X, 2) + POWER(:pointY - POINT_Y, 2)) <=  POWER(:maxD, 2);";
 	private static IPOIRepository poisInstance;
 
-	public static IPOIRepository getInstance() {
+	public static synchronized IPOIRepository getInstance() {
 		if (poisInstance == null) {
 			poisInstance = new POIs();
 		}

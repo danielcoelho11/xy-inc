@@ -9,7 +9,7 @@ public class POIService {
 
 	private static POIService poiServiceInstance;
 
-	public static POIService getInstance() {
+	public static synchronized POIService getInstance() {
 		if (poiServiceInstance == null) {
 			poiServiceInstance = new POIService();
 		}
